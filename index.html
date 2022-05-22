@@ -5,9 +5,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form practice</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  
+  <section class="form-section">
+    <h2 class="title-section">register</h2>
+    <p>Create your account. It's free and only takes a minute.</p>
+    <form class="form" action="">
+      <div class="username">
+        <input 
+          type="text" 
+          class="firstname" 
+          name="firstname" 
+          placeholder="first name" 
+          autofocus
+          required
+          pattern="^[A-Z][a-z]{3,12}$">
+        <input 
+          type="text" 
+          class="lastname" 
+          name="lastname" 
+          placeholder="last name"
+          required
+          pattern="^[A-Z][a-z]{3,15}$">
+      </div>
+      <input type="email" placeholder="email" required>
+      <input type="password" placeholder="password" required>
+      <input type="password" placeholder="confirm password" required>
+      <label class="label-chekbox" for="checkbox">
+        <input type="checkbox" name="agreement" value="accept" required> I accept the <a href="https://" target="_blank">Terms of Use</a> & <a href="https://" target="_blank">Privacy Policy.</a>
+      </label>
+      <input class="submit-btn" type="submit" value="Register Now">
+    </form>
+  </section>
+  <p>Alreay have an account <a href="" target="_blank">Sign in</a></p>
 </body>
 </html>

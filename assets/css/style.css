@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  --main-color: #878588;;
+}
+
+
+body {
+  background-color: #63738a;
+  font-family: sans-serif;
+}
+
+.form-section{
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  padding: 40px ;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 50px;
+  background-color: #f2f3f7;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.title-section,
+.title-section + p {
+  color: var(--main-color);
+  text-align: center;
+}
+.title-section {
+  position: relative;
+  padding-bottom: 20px ;
+  color: #696563;
+  font-size: 33px;
+  text-transform: capitalize;
+}
+.title-section::before,
+.title-section::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 126px;
+  background-color: #d1d2d4;
+}
+.title-section::before{
+  left: 0;
+  top: 15px;
+}
+.title-section::after{
+  right: 0;
+  top: 15px;
+}
+.title-section + p {
+  padding-bottom: 40px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* width: 400px; */
+  min-height: 400px;
+  margin-bottom: 20px;
+}
+input {
+  border: 1px solid #bab8bb;
+  border-radius: 5px;
+  padding: 1em;
+  font-size: 16px;
+}
+input:focus:not(.submit-btn) {
+  border: 1px solid #696563;
+}
+input::placeholder{
+  text-transform: capitalize;
+}
+.username {
+  display: flex;
+  justify-content: space-between;
+}
+.firstname,
+.lastname {
+  max-width: 47%;
+}
+
+.label-chekbox {
+  color: var(--main-color);
+}
+.label-chekbox > a{
+  color: #50a851;
+  text-decoration: none;
+}
+.submit-btn {
+  padding: 0.8em 1em;
+  border: none;
+  background-color: #53ab54;
+  background: linear-gradient(0deg, rgba(63,147,63,1) 43%, rgba(87,182,85,1) 100%);
+  color: #f6fcf4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 17px;
+  font-weight: bold;
+}
+.submit-btn:active {
+  background: linear-gradient(0deg, rgba(63,147,63,1) 21%, rgba(87,182,85,1) 85%);
+}
+.form-section + p,
+.form-section + p > a{
+  margin-top: 20px;
+  color: #f6fcf4;
+  text-align: center;
+  font-size: 15px;
+}
